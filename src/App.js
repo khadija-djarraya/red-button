@@ -1,21 +1,26 @@
 import './App.css';
-//import { useNavigate } from 'react-router';
-import playVideo from './components/video';
 
 function App() {
-  //let navigate = useNavigate();
-  //var video="https://youtu.be/dQw4w9WgXcQ?t=42";
-  const alerts = [playVideo,'You clicked it...','Stop.',"You're tickling me","I said don't click!","AAAAAAAH!","You lost.","Why are you wasting your time?","What did you get out of doing this?"];
+  var video="https://youtu.be/dQw4w9WgXcQ?t=42";
+
+  const playVideo=(thevideo)=>{
+    window.location.href=thevideo;
+  }
+  const alerts = [playVideo,"Stop.","You're making a mistake...","Why are you wasting your time in this?","okay...good job...","You're still trying, haha.","Waiting for a rickroll?"];
   var myalerts = "";
-  //var message="";
+
   function handleClick(event) {
     event.preventDefault();
     myalerts = alerts[Math.floor(Math.random() * alerts.length)];
-    if(typeof(myalerts)===String)
-    console.log(myalerts);
+    if(myalerts instanceof Function){
+      console.log("VIDEO")
+      myalerts(video);
+    }
+    else{
     //else navigate(myalerts);
     document.getElementById('shouldappear').className="visible absolute inset-x-0 bottom-12 h-10 container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-5 ";
     document.getElementById("myalerts").innerHTML =myalerts;
+    }
   }    
 
   return (
@@ -28,7 +33,7 @@ function App() {
           This red button may be tempting. But don't press it!
         </p>
        
-        <button onClick={handleClick} className="text-2xl place-items-center absolute top-1/3 left-1/2 transform -translate-x-1/2 bg-red-500 hover:bg-red-800 text-white font-bold py-20 px-16 border-b-2 border-red-800 hover:border-red-500 rounded-full m-10">
+        <button id='thebutton' onClick={handleClick} className="text-2xl place-items-center absolute top-1/3 left-1/2 transform -translate-x-1/2 bg-red-500 hover:bg-red-800 text-white font-bold py-20 px-16 border-b-2 border-red-800 hover:border-red-500 rounded-full m-10">
           Button
         </button>
       </div>
