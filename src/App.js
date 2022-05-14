@@ -6,7 +6,7 @@ function App() {
   const playVideo=(thevideo)=>{
     window.location.href=thevideo;
   }
-  const alerts = [playVideo,"Stop.","You're making a mistake...","Why are you wasting your time in this?","okay...good job...","You're still trying, haha.","Waiting for a rickroll?"];
+  const alerts = [playVideo,"Stop.","I said stop pressing it!","Alright, you successfully discovered the unravelling world...of stubborness","Why are you wasting your time in this?","okay...good job...","You're still trying, haha.","Waiting for a rickroll?"];
   var myalerts = "";
 
   function handleClick(event) {
