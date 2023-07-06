@@ -2,12 +2,7 @@
 
 ## Description
 
-This is an interactive website representing a red button. If you click on it, you should deal with its consequences...
- 
-- Motivation: Build a funny website that anyone can use when they want to be entertained.
-- It was an entertaining idea that can easily be improved and additional features could be implemented.
-- It solves the problem we all face everyday: Boredom!
-- I learned how to style a website with TailwindCSS (simpler than expected!) and how to use states and event handlers.
+Welcome to the Red Button React project! This simple and funny project features a red button that, when pressed, generates a message at the bottom of the website. However, be warned, there's also a chance that the red button may redirect you to a classic internet surprise: a Rickroll!
 
 ## Table of Contents (Optional)
 
